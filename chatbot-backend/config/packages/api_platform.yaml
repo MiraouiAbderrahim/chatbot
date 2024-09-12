@@ -1,0 +1,23 @@
+api_platform:
+    title: 'My API'
+    version: '0.1.0'
+    mapping:
+        paths: 
+            - '%kernel.project_dir%/src/Entity'
+    swagger:
+        api_keys:
+            - name: 'Authorization'  
+              key: 'bearerAuth'     
+              type: 'header'        
+    collection:
+        pagination:
+            enabled: true 
+            items_per_page_parameter_name: 'perPage'  
+            page_parameter_name: 'page'  
+            enabled_parameter_name: 'pagination'  
+            partial_parameter_name: 'partial'  
+
+    formats:
+        jsonld: ['application/ld+json']
+        json: ['application/json']
+        html: ['text/html']

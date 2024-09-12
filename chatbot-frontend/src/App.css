@@ -1,0 +1,82 @@
+/* Reset for body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Fullscreen background image */
+.App {
+  background-image: url('/public/Abderrahim MIRAOUI.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Fix the header to the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+
+/* Button spacing and styles */
+.navbar-nav .nav-item {
+  margin-left: 10px;
+}
+
+.navbar-nav .nav-item .nav-link,
+.navbar-nav .nav-item .btn {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Collapse button for mobile */
+.navbar-toggler {
+  margin-right: 10px;
+}
+
+/* Content Container */
+.container {
+  padding-top: 70px; /* To avoid content overlapping with fixed header */
+  text-align: center;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+
+  .navbar-nav .nav-item .nav-link,
+  .navbar-nav .nav-item .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    padding: 80px 15px;
+  }
+}
